@@ -18,6 +18,6 @@ for book in books:
         price_tag = price.text
     stock = book.find("p", class_="instock availability")
     if stock:
-        ok = book.find("i", class_="icon-ok")
         stock_status = stock.text
-    print(f"{title} - {price_tag} is {stock_status}")
+        stock_stats = stock_status.strip()
+    print(f"{title} - {price_tag} is {stock_stats}")
