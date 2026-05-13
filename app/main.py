@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import Base, engine
 from app.routers import crawl, match, resources, topics
@@ -9,6 +10,13 @@ app = FastAPI(
     title="Module 3 - OER Intelligent Scraping Service (PoC)",
     description="Scrapes OER platforms, normalizes metadata, generates embeddings, and matches resources to course topics.",
     version="0.1.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(topics.router, prefix="/topics", tags=["Topics"])
