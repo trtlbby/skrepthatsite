@@ -8,7 +8,7 @@ import time
 from dotenv import load_dotenv
 import httpx
 
-from app.crawlers.base import BaseCrawler, RawResource
+from subfolder.app.crawlers.base import BaseCrawler, RawResource
 
 logger = logging.getLogger(__name__)
 

@@ -6,13 +6,14 @@ import logging
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.crawlers.gutenberg import GutenbergCrawler
-from app.crawlers.merlot import MERLOTCrawler
-from app.crawlers.openstax import OpenStaxCrawler
-from app.database import get_db
-from app.models import CrawlLog, Resource, ResourceAuthor
-from app.schemas import CrawlRequest, CrawlResponse
-from app.services import deduplicator, normalizer
+from subfolder.app.crawlers.gutenberg import GutenbergCrawler
+from subfolder.app.crawlers.merlot import MERLOTCrawler
+from subfolder.app.crawlers.openstax import OpenStaxCrawler
+from subfolder.app.database import get_db
+from subfolder.app.models import CrawlLog, Resource, ResourceAuthor
+from subfolder.app.schemas import CrawlRequest, CrawlResponse
+from subfolder.app.services import normalizer
+from subfolder.app.services import deduplicator
 
 logger = logging.getLogger(__name__)
 

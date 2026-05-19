@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.database import Base, engine
-from app.routers import crawl, match, resources, topics
+from subfolder.app.database import Base, engine
+from subfolder.app.routers import topics
+from subfolder.app.routers import crawl, match, resources
 
 Base.metadata.create_all(bind=engine)
 

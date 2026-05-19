@@ -3,10 +3,10 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from app.database import get_db
-from app.models import Topic
-from app.schemas import TopicCreate, TopicResponse
-from app.services import embedder
+from subfolder.app.database import get_db
+from subfolder.app.models import Topic
+from subfolder.app.schemas import TopicCreate, TopicResponse
+from subfolder.app.services import embedder
 
 router = APIRouter()
 

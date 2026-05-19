@@ -1,9 +1,0 @@
-/.venv
-.env
-.venv/
-oer_poc.db
-
-app/__pycache__/
-app/crawlers/__pycache__/
-app/routers/__pycache__/
-app/services/__pycache__/

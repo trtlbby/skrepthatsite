@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from rapidfuzz import fuzz
 
-from app.models import Resource
+from subfolder.app.models import Resource
 
 
 def find_duplicate(resource_dict: dict, db) -> str | None:

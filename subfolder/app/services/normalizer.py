@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 import unicodedata
 
-from app.crawlers.base import RawResource
+from subfolder.app.crawlers.base import RawResource
 
 
 def _clean_text(value: str | None) -> str | None:

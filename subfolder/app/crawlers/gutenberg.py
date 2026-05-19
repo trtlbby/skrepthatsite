@@ -7,7 +7,7 @@ import time
 from bs4 import BeautifulSoup
 import requests
 
-from app.crawlers.base import BaseCrawler, RawResource
+from subfolder.app.crawlers.base import BaseCrawler, RawResource
 
 logger = logging.getLogger(__name__)
 

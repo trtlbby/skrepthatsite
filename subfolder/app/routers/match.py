@@ -5,10 +5,10 @@ import json
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session, joinedload
 
-from app.database import get_db
-from app.models import Resource, Topic
-from app.schemas import MatchRequest, MatchResponse
-from app.services import matcher
+from subfolder.app.database import get_db
+from subfolder.app.models import Resource, Topic
+from subfolder.app.schemas import MatchRequest, MatchResponse
+from subfolder.app.services import matcher
 
 router = APIRouter()
 

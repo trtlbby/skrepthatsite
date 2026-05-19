@@ -4,7 +4,7 @@ from uuid import uuid4
 from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from app.database import Base
+from subfolder.app.database import Base
 
 
 class Resource(Base):
